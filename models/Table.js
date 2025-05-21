@@ -6,6 +6,13 @@ const tableSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+
+  type:{
+    type: String,
+    enum: ['round', 'rect'],
+    //required: true,
+  },
+
   status: {
     type: String,
     enum: ['reservation', 'occupied', 'vacant'],
